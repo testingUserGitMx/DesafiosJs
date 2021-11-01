@@ -1,49 +1,34 @@
+// DESAFIO #4.5 - FUNCIONES RELACIONADAS 📕📙 //
 
-/* DESAFIO # 1  👇
+// GLOBALS 
+let nombre = prompt('Cual es tu nombre?');
+let IVA = 0.16
 
-let nombre = prompt('Tu nombre');
-let edad = prompt('Tu edad');
-
-alert("Tu nombre es" + " " + nombre);
-alert("Tienes" + " " + edad + " " + "de edad");
-*/
-
-
-// DESAFIO # 2 👇
-
-/* 
-let number = Number(prompt('Ingrese un numero ganador ...'));
-
-if(number > 10 && number < 50) {
-    alert('¡Felicidadez, Haz escogido un numero ganador 🎉!')
-} else {
-    alert('Numero no ganador, suerte en la proxima...')
-};
-
-*/
-
-// DESAFIO # 3 👇
-
-/* 1️⃣ ALGORITMO QUE MULTIPLICA UN NUMERO 5 VECES 
-
-let ingresarNumero = Number(prompt('Ingrese un numero ...'));
-
-for(let i = 1; i <= 5; i++) {
-    let resultado = ingresarNumero * i;
-    alert(ingresarNumero + "x" + i + "=" + resultado)
+// FUNCION SALUDAR
+const saludar = function (nombre) {
+    alert(`Bienvenido ${nombre}`)
 }
 
-*/
+// FUNCION CALCULAR EL IVA - IVA 16%
+const costoTotal = () => {
+    let precio = Number(prompt('Ingrese precio'));
+    let precioTotal = precio * IVA + precio
+    alert(`El costo total es: ${precioTotal}`)
+};
 
-/* 2️⃣ Pedir un texto mediante prompt, concatenar un valor en cada repetición, 
-realizando una salida por cada resultado hasta que se ingresa “ESC”. 
- 
- let texto = prompt('Escribe algo...');
- 
- while(texto != "ESC"){
-     alert('Bienvenido, la palabra magica es "ESC"');
-     texto = prompt('Palabra magica?')
- }
-*/
- 
- 
+// ES MULTIPLO ?
+const isMultiple = nombre => {
+    let number = Number(prompt('Ingrese un numero'));
+    if(number %2 == 0) {
+        alert(`${nombre}!, El numero que ingresaste es multiplo!`)
+    } else {
+        alert(`${nombre}!, El numero que ingresaste no es multiplo :(`)
+    }
+}
+
+
+saludar(nombre);
+
+costoTotal();
+
+isMultiple(nombre);
