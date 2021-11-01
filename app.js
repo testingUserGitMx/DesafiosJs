@@ -36,7 +36,7 @@ for(let i = 1; i <= 5; i++) {
 */
 
 /* 2️⃣ Pedir un texto mediante prompt, concatenar un valor en cada repetición, 
-realizando una salida por cada resultado hasta que se ingresa “ESC”. */
+realizando una salida por cada resultado hasta que se ingresa “ESC”. 
  
  let texto = prompt('Escribe algo...');
  
@@ -44,6 +44,6 @@ realizando una salida por cada resultado hasta que se ingresa “ESC”. */
      alert('Bienvenido, la palabra magica es "ESC"');
      texto = prompt('Palabra magica?')
  }
-
+*/
  
  
