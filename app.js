@@ -1,34 +1,23 @@
-// DESAFIO #4.5 - FUNCIONES RELACIONADAS 📕📙 //
+class Ticket {
+  constructor(pelicula, horario, entradas) {
+    this.pelicula = pelicula;
+    this.horario = horario;
+    this.entradas = entradas;
+  }
 
-// GLOBALS 
-let nombre = prompt('Cual es tu nombre?');
-let IVA = 0.16
+  comprarEntrada() {
+    document.write(`
+      <p> Haz comprado ${this.entradas} entrada(s) para la pelicula ${this.pelicula} 
+      a las ${this.horario} hrs</p>`);
+  }
 
-// FUNCION SALUDAR
-const saludar = function (nombre) {
-    alert(`Bienvenido ${nombre}`)
+  verPelicula(){
+      document.write(`Estas viendo: ${this.pelicula}`)
+  }
+
 }
 
-// FUNCION CALCULAR EL IVA - IVA 16%
-const costoTotal = () => {
-    let precio = Number(prompt('Ingrese precio'));
-    let precioTotal = precio * IVA + precio
-    alert(`El costo total es: ${precioTotal}`)
-};
+const user = new Ticket("Infinity War", "6PM", 2);
 
-// ES MULTIPLO ?
-const isMultiple = nombre => {
-    let number = Number(prompt('Ingrese un numero'));
-    if(number %2 == 0) {
-        alert(`${nombre}!, El numero que ingresaste es multiplo!`)
-    } else {
-        alert(`${nombre}!, El numero que ingresaste no es multiplo :(`)
-    }
-}
-
-
-saludar(nombre);
-
-costoTotal();
-
-isMultiple(nombre);
+user.comprarEntrada();
+user.verPelicula();
