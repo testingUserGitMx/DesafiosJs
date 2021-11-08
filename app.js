@@ -7,17 +7,22 @@ class Ticket {
 
   comprarEntrada() {
     document.write(`
-      <p> Haz comprado ${this.entradas} entrada(s) para la pelicula ${this.pelicula} 
-      a las ${this.horario} hrs</p>`);
+    <p> Haz comprado ${this.entradas} entrada(s) para la pelicula ${this.pelicula} 
+    a las ${this.horario} hrs</p>`);
+    
+    entradasList.push(this.entradas);
   }
 
-  verPelicula(){
-      document.write(`Estas viendo: ${this.pelicula}`)
+  verPelicula() {
+    document.write(`Estas viendo: ${this.pelicula}`);
   }
-
 }
 
 const user = new Ticket("Infinity War", "6PM", 2);
 
+const entradasList = [];
+
 user.comprarEntrada();
 user.verPelicula();
+
+console.log(entradasList);
