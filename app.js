@@ -1,3 +1,7 @@
+const formulario = document.querySelector("#formulario");
+const alertSuccess = document.querySelector("#alertSuccess");
+const template = document.querySelector("#template").content;
+
 class Ticket {
   constructor(pelicula, horario, entradas) {
     this.pelicula = pelicula;
@@ -9,7 +13,7 @@ class Ticket {
     document.write(`
     <p> Haz comprado ${this.entradas} entrada(s) para la pelicula ${this.pelicula} 
     a las ${this.horario} hrs</p>`);
-    
+
     entradasList.push(this.entradas);
   }
 
