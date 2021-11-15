@@ -27,20 +27,35 @@
         <input 
         type="text"
         name="nombre"
-        
+        id="inputNombre"
         class="form-control mb-2" 
-        />
+        >
+
+        <label 
+        class="form-text mb-2" 
+        for="nombre">Ingresa cantidad de entradas a reservar:</label>
+
+        <input 
+        type="number"
+        name="entradas"
+        id="inputEntradas"
+        min="0"
+        class="form-control mb-2" 
+        >
 
         <label 
         class="form-text mb-2" for="appt">Elige un horario:</label>
         <br>
-        <input class="form-control" type="time" id="appt" name="appt"
+        <input class="form-control" type="time" id="hour" name="appt"
         min="09:00" max="22:00" required> 
     
         <small class="text-muted"> Horarios disponibles 9 a.m. a 10 p.m.</small>
         
         <button type="submit" 
-        class="btn btn-primary mt-3 w-100">Agregar</button>
+        class="btn btn-primary mt-3 w-100"
+        id="btnAgregar">
+          Agregar
+        </button>
       </form>
 
       <section id="alertSuccess" class="mt-3">
@@ -51,9 +66,7 @@
     </div>
     
     <section id="template">
-      <article>
-        <p></p>
-      </article>
+      <ul id="ul"></ul>
     </section>
     
     <script src="app.js"></script>
