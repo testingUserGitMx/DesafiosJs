@@ -1,3 +1,7 @@
+/* EJERCICIOS COMPLEMENTARIOS   
+
+
+
 // ORDENAR UN ARRAY DE OBJETOS 📚📕
 
 // ORDEN POR MENOS PRECIO
@@ -46,4 +50,16 @@ dates.sort((a, b) => {
     }
 })
 
-console.log(dates)
+console.log(dates) */
+
+
+// Desafío: Generar HTML 👇
+const ul = document.getElementById("ul");
+
+const arrayPaises = ["Canada", "Estados Unidos", "Mexico", "Sudamerica"];
+
+arrayPaises.forEach((pais) => {
+  const li = document.createElement("li");
+  li.textContent = pais;
+  ul.appendChild(li);
+});
