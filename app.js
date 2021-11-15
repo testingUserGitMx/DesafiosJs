@@ -30,8 +30,6 @@ class Ticket {
 // ARRAY DE ENTRADAS
 const entradasList = [];
 
-// user.comprarEntrada();
-// user.verPelicula();
 
 // BIENVENIDA DINAMICA h2
 
@@ -40,10 +38,10 @@ const bienvenida = (name) => {
 };
 
 // RENDER
-// d.addEventListener("DOMContentLoaded", () => {
-//   let name = prompt("Login - Ingresa tu nombre:");
-//   bienvenida(name);
-// });
+d.addEventListener("DOMContentLoaded", () => {
+  let name = prompt("Login - Ingresa tu nombre:");
+  bienvenida(name);
+});
 
 const agregarTicket = (userTicket) => {
   entradasList.push(userTicket);
