@@ -1,6 +1,8 @@
 const formulario = document.querySelector("#formulario");
 const alertSuccess = document.querySelector("#alertSuccess");
 const template = document.querySelector("#template").content;
+const d = document;
+
 
 class Ticket {
   constructor(pelicula, horario, entradas) {
@@ -30,3 +32,17 @@ user.comprarEntrada();
 user.verPelicula();
 
 console.log(entradasList);
+
+
+// BIENVENIDA DINAMICA h1
+
+const bienvenida = (name) => {
+  d.querySelector("h2").innerText = `¡Bienvenid@ ${name} !`
+  
+}
+
+
+d.addEventListener("DOMContentLoaded", (e) => {
+  let name = prompt("Login - Ingresa tu nombre:");
+  bienvenida(name);
+} )
