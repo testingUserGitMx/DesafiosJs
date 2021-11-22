@@ -95,12 +95,14 @@ formulario.addEventListener("submit", (e) => {
 
   console.log(entradasList);
 
+  // GUARDAR EN LOCALSTORAGE
   localStorage.setItem("tickets", JSON.stringify(entradasList));
+  
   mostrarTicket();
 });
 
 // DOM LOAD
 d.addEventListener("DOMContentLoaded", () => {
-
   pintarLS();
 });
+
