@@ -4,7 +4,6 @@ const inputNombre = document.getElementById("inputNombre");
 const inputEntradas = document.getElementById("inputEntradas");
 const hour = document.getElementById("hour");
 const btnAgregar = document.getElementById("btnAgregar");
-const ul = document.getElementById("ul");
 const list = document.getElementById("list");
 const d = document;
 
@@ -82,6 +81,19 @@ const pintarLS = () => {
   }
 };
 
+// qrcode 
+const qrdata1 = inputNombre.value;
+const qrdata2 = hour.value; 
+const qrdata3 = inputEntradas.value; 
+const qrcode = new QRCode(document.getElementById("qrcode"));
+
+const generateQR = () => {
+  d.getElementById('spanQrCode').classList.remove ('d-none');
+  qrcode.makeCode(qrdata1,qrdata2,qrdata3);
+}
+
+
+// LISTENERS 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -99,6 +111,8 @@ formulario.addEventListener("submit", (e) => {
   localStorage.setItem("tickets", JSON.stringify(entradasList));
   
   mostrarTicket();
+
+  generateQR();
 });
 
 // DOM LOAD
