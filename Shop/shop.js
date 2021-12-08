@@ -8,7 +8,7 @@ const list = document.getElementById("list");
 const d = document;
 
 class Ticket {
-  constructor(pelicula, horario, entradas,id) {
+  constructor(pelicula, horario, entradas, id) {
     this.pelicula = pelicula;
     this.horario = horario;
     this.entradas = entradas;
@@ -33,8 +33,6 @@ let entradasList = [];
 const agregarTicket = (userTicket) => {
   entradasList.push(userTicket);
 };
-
-
 
 const templateTicket = (ticket) => {
   const { pelicula, horario, entradas, id } = ticket;
@@ -63,7 +61,7 @@ const templateTicket = (ticket) => {
     </div>
     </div>
     `;
-   d.querySelector('.bi-trash').dataset.id = id 
+  d.querySelector(".bi-trash").dataset.id = id;
 };
 
 // FN MOSTRAR TICKET
@@ -72,12 +70,17 @@ const mostrarTicket = () => {
     entradasList.forEach((ticket) => {
       templateTicket(ticket);
     });
+  let count = document.getElementById("count");
+  count.innerHTML = `${entradasList.length}`;
 };
 
 // FN PINTAR LOCALSTORAGE
 const pintarLS = () => {
   (list.innerHTML = ""),
     (entradasList = JSON.parse(localStorage.getItem("tickets")));
+
+  let count = document.getElementById("count");
+  count.innerHTML = `${entradasList.length}`;
 
   if (entradasList === null) {
     entradasList = [];
@@ -88,53 +91,70 @@ const pintarLS = () => {
   }
 };
 
-// qrcode 
+// qrcode
 const qrdata1 = inputNombre.value;
-const qrdata2 = hour.value; 
-const qrdata3 = inputEntradas.value; 
+const qrdata2 = hour.value;
+const qrdata3 = inputEntradas.value;
 const qrcode = new QRCode(document.getElementById("qrcode"));
 
 const generateQR = () => {
-  d.getElementById('spanQrCode').classList.remove ('d-none');
-  qrcode.makeCode(qrdata1,qrdata2,qrdata3);
-}
+  d.getElementById("spanQrCode").classList.remove("d-none");
+  qrcode.makeCode(qrdata1, qrdata2, qrdata3);
+};
 
-
-// LISTENERS 
+// LISTENERS
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const pelicula = inputNombre.value;
   const entradas = inputEntradas.value;
   const horario = hour.value;
-  const id = `${Date.now()}`
+  const id = `${Date.now()}`;
+  count += 1;
 
-  const userTicket = new Ticket(pelicula, horario, entradas,id);
+  if (!pelicula.trim() || !entradas.trim() || !horario.trim()) {
+    $("#alert").remove();
 
+    $("#container-form").append(
+      '<div id="alert" class="mt-4 text-center alert alert-danger" role="alert"> ¡Error, completa todos los campos!</div>'
+    );
 
+    $("#alert").fadeIn("slow").delay(2000).fadeOut("slow");
+
+    return;
+  }
+
+  const userTicket = new Ticket(pelicula, horario, entradas, id);
 
   agregarTicket(userTicket);
 
-  console.log(entradasList);
+  $("#alert").remove();
+
+  $("#container-form").append(
+    '<div id="alert" class="mt-4 text-center alert alert-success" role="alert"> ¡Compra realizada con exito!</div>'
+  );
+
+  $("#alert").fadeIn("slow").delay(2000).fadeOut("slow");
 
   // GUARDAR EN LOCALSTORAGE
   localStorage.setItem("tickets", JSON.stringify(entradasList));
-  
+
   mostrarTicket();
 
   generateQR();
 });
 
-d.addEventListener('click', (e) => {
-  if (e.target.matches('.bi-trash')) {
-   entradasList = entradasList.filter(item => item.id !== e.target.dataset.id)
-   mostrarTicket()
-   localStorage.setItem("tickets", JSON.stringify(entradasList));
+d.addEventListener("click", (e) => {
+  if (e.target.matches(".bi-trash")) {
+    entradasList = entradasList.filter(
+      (item) => item.id !== e.target.dataset.id
+    );
+    mostrarTicket();
+    localStorage.setItem("tickets", JSON.stringify(entradasList));
   }
-})
+});
 
 // DOM LOAD
 d.addEventListener("DOMContentLoaded", () => {
   pintarLS();
 });
-

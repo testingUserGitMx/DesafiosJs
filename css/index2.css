@@ -127,6 +127,10 @@ body{
 	background: red;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* 
 #banner{
 	height: 100vh;
@@ -148,11 +152,11 @@ body{
   #banner__title{
 	font-size: 3rem;
 	font-weight: 800;
-	padding-bottom: 0.3rem;
+	padding-bottom: 0rem;
 	text-shadow: 2px 6px 2px rgba(0,0,0,0.67);
   }
   #banner__description{
-	width: 45rem;
+	width: 90%;
 	line-height: 1.5;
 	padding-top: 1rem;
 	font-size: .9rem;
@@ -167,7 +171,7 @@ body{
 	font-weight: 700;
 	border-radius: .2vw;
 	padding-left: 2rem;
-	margin-top: 1rem;
+	margin-top: 0rem;
 	margin-bottom: 1rem;
 	padding-right: 2rem;
 	margin-right: 1rem;
@@ -181,12 +185,12 @@ body{
 	transition: all .3s;
   }
   #banner__fadeBottom{
-	margin-top: 200px;
-	height: 7.4rem;
+	margin-top: 150px;
+	height: 6.9rem;
 	background: linear-gradient(
 	  180deg,
 	  transparent,
-	  rgba(37,37,37, .61),
+	  rgba(37,37,37, .80),
 	  #111
 	);
 } 

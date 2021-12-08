@@ -56,8 +56,8 @@
           <div class="join-box">
               <a class="mt-0 me-3 text-white text-uppercase text-decoration-underline"
               href="../Fakeflix/index.html">¿searching movies? click here !</a>
-              <button class="btn btn-danger bg-danger" id="homeBtn">joining now</button>
-              <button class="btn" id="shopBtn">sign in</button>
+              <button class="btn2  bg-danger" id="homeBtn">JOINING NOW</button>
+              <a class="btn2" href="../login/login.html" id="shopBtn">Sign Out</a>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
       
 
 
-    <div class="container p-1 container-shop">
+    <div class="container mb-4 p-1 container-shop">
       
       <div id="container-form" class="container my-5">
         <h1 id="h1" class="fw-bolder">Reservar lugares</h1>
@@ -88,7 +88,7 @@
   
           <label 
           class="form-text mb-2" 
-          for="nombre">Ingresa cantidad de entradas a reservar:</label>
+          for="nombre">Ingresa cantidad de lugares a reservar:</label>
   
           <input 
           type="number"
@@ -116,7 +116,9 @@
       </div>
       
       <div class="container mb-5">
-        <div class="mb-2"><span class="fs-5 fw-bold">Tus tickets (0):</span></div>
+        <div class="mb-2">
+          <span class="fs-5 fw-bold">Tus Tickets (<span id="count">0</span>)</span>
+        </div>
         <div id="list" class=""></div>
         <button id="btn1" class="btn btn-primary w-100" style="background: #777777">Ocultar</button>
       </div>
