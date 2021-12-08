@@ -1,43 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../css/index.css">
-    
-    
-    <title>Fakeflix : Homepage</title>
-</head>
-<body>
-    <nav class="navbar">
-        <img src="img/logo.png" class="logo" alt="">
-        <img src="https://fontmeme.com/permalink/211203/e6c71be28c7b433548d17c0e97944686.png" class="logo" alt="netflix-font" border="0">
-        <a href="../Shop/shop.html" class="nav-link">Buy Tickets</a>
-        <div class="join-box">
-            <p class="join-msg">unlimited tv shows & movies</p>
-            <button class="btn join-btn" id="homeBtn">join now</button>
-            <button class="btn" id="shopBtn">sign in</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../css/index2.css" />
+
+    <title>CineMark Avenue : Homepage</title>
+  </head>
+  <body>
+    <div class="">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold text-white" href="#"
+            >CineMark Avenue</a
+          >
+          <button
+            class="navbar navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white active fw-bolder"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="../Shop/shop.html"
+                  >Buy Tickets</a
+                >
+              </li>
+            </ul>
+            <div class="join-box">
+              <a
+                class="m-0 text-white text-uppercase text-decoration-underline"
+                href="../Shop/shop.html"
+                >¿buy tickets? click here !</a
+              >
+              <button class="btn2  bg-danger" id="homeBtn">
+                joining now
+              </button>
+              <button class="btn2" id="shopBtn">sign in</button>
+            </div>
+          </div>
         </div>
-    </nav>
-    
+      </nav>
 
-	<div class="contenedor main" id="contenedor"></div>
+      <!-- banner -->
+      <div class="container-fluid">
+        <header id="banner">
+          <div id="banner__contents" class="">
+            <h1 id="banner__title" class="mb-4"></h1>
+            <div id="banner__buttons" class="">
+              <button id="banner__button">Play</button>
+              <button id="banner__button">My List</button>
+              <p id="banner__description" class=""></p>
+            </div>
+          </div>
+          <div id="banner__fadeBottom"></div>
+        </header>
+      </div>
 
-	<div class="paginacion">
-		<button id="btnAnterior">Anterior</button>
-		<button id="btnSiguiente">Siguiente</button>
-	</div>
 
-	
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./app.js"></script>
+      
 
 
+      <!-- <div class="ms-3 mt-4 me-4 d-flex justify-content-between">
+        <h1 class="text-white fw-bold fs-3">Cartelera en tu ciudad:</h1>
+        <input type="text" class="form-control" placeholder="Busca una pelicula...">
+        <span class="fw-bold text-white">Most Populars</span>
+      </div> -->
+      <div class="container mx-auto d-flex justify-content-between mt-4 row g-3">
+        <div class="col-auto">
+          <h1 class="text-white fw-bold fs-3">Cartelera en tu ciudad:</h1>
+        </div>
+        <div class="col-auto">
+          <input type="password" class="form-control" id="inputPassword2" placeholder="Busca una pelicula...">
+          
+        </div>
+        <div class="col-auto">
+          <span class="fw-bold text-white">Most Populars</span>
+        </div>
+      </div>
 
-</body>
+      <div class="container mb-5">
+        <div class="row m-3" id="contenedor"></div>
+      </div>
+
+      <div class="paginacion">
+        <button id="btnAnterior">Anterior</button>
+        <button id="btnSiguiente">Siguiente</button>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="../Fakeflix/app.js"></script>
+    </div>
+  </body>
 </html>
