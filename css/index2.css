@@ -164,7 +164,7 @@ body{
 	height: 80px;
   }
   #banner__button{
-	cursor: pointer;
+	cursor: auto;
 	color: white;
 	outline: none;
 	border: none;
@@ -202,4 +202,8 @@ body{
 .card-movie:hover {
 	transform: translateY(-15px);
 	transition: transform .3s;
+}
+
+#homeBtn{
+	cursor: auto;
 }

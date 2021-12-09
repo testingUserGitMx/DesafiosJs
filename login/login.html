@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="../images/fav-icon.ico" type="image/x-icon">
+    
+    
+    
+    
+    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,8 +35,13 @@
       crossorigin="anonymous"
     ></script>
 
+    <link rel="manifest" href="/manifest.json" />
+
+    <meta name="theme-color" content="#030416" />
+
+
     <link rel="stylesheet" href="../css/login.css" />
-    <title>Document</title>
+    <title>Cinema Avenue : Login</title>
 </head>
 <body>
   <body>
@@ -46,7 +64,7 @@
         <div id="container">
             <form id="log-in-form" action="">
                 <div class="label-container">
-                    <h2 id="sign-in-text">Sign In</h1>
+                    <h2 id="sign-in-text">Inicia Sesión</h1>
                 </div>
     
                 <div class="box-container" id="user-container">
@@ -82,6 +100,11 @@
             </div>
     
     </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js");
+      }
+    </script>
     <script src="./login.js"></script>
 </body>
 </html>

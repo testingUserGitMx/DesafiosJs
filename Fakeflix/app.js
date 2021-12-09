@@ -21,13 +21,14 @@ btnSiguiente.addEventListener('click', () => {
         pagina += 1
         jqueryData()
     }
+
 })
 
 btnAnterior.addEventListener('click', () => {
     if (pagina > 1) {
         pagina -= 1
         jqueryData()
-    }
+    } 
 })
 
 
@@ -35,18 +36,6 @@ const jqueryData = () => {
     $.get(`${api_key2}${pagina}`, (respuesta, estado) => {
         if (estado === "success") {
             showMovies(respuesta)
-            // let movies = '';
-
-            // respuesta.results.forEach(movie => {
-            //     console.log(movie.title)
-            //     movies += `
-            //     <div class="col-md-3 mt-4 card-movie text-center text-white">
-            //         <img class="img-fluid rounded" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}"
-            //         <p class="">${movie.title}</p>
-            //     </div>    
-            //     `;
-            // })
-            // document.getElementById('contenedor').innerHTML = movies;
         }
     })
 }
