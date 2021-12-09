@@ -112,7 +112,7 @@ formulario.addEventListener("submit", (e) => {
   const id = `${Date.now()}`;
   count += 1;
 
-  if (!pelicula.trim() || !entradas.trim() || !horario.trim()) {
+  if ((!pelicula.trim()) || (!entradas.trim()) || (!horario.trim())) {
     $("#alert").remove();
 
     $("#container-form").append(

@@ -22,55 +22,66 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="../css/index2.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bold text-white" href="#"
-            >CineMark Avenue</a
-          >
-          <button
-            class="navbar navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white active fw-bolder"
-                  aria-current="page"
-                  href="#"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-secondary" href="../Shop/shop.html"
-                  >Buy Tickets</a
-                >
-              </li>
-            </ul>
-            <div class="join-box">
-              <a
-                class="m-0 text-white text-uppercase text-decoration-underline"
-                href="../Shop/shop.html"
-                >¿buy tickets? click here !</a
-              >
-              <button class="btn2  bg-danger" id="homeBtn">
-                joining now
-              </button>
-              <a class="btn2" href="../login/login.html" id="shopBtn">Sign Out</a>
-            </div>
-          </div>
+  <body>
+    <div class="background-wrapper">
+        <!-- <img class="background" src="https://assets.nflxext.com/ffe/siteui/vlv3/5039d301-b891-47b2-b755-553e5c874395/e792888a-2c70-4a78-9dfd-b8a26e767ae4/BR-en-20200210-popsignuptwoweeks-perspective_alpha_website_small.jpg" srcset="https://assets.nflxext.com/ffe/siteui/vlv3/5039d301-b891-47b2-b755-553e5c874395/e792888a-2c70-4a78-9dfd-b8a26e767ae4/BR-en-20200210-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/5039d301-b891-47b2-b755-553e5c874395/e792888a-2c70-4a78-9dfd-b8a26e767ae4/BR-en-20200210-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/5039d301-b891-47b2-b755-553e5c874395/e792888a-2c70-4a78-9dfd-b8a26e767ae4/BR-en-20200210-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w" alt> -->
+        <img src="../movie-cover.jpg" class="background" alt="" srcset="">
+      </div>
+    <div id="app">
+      
+      <!--LOGO-->  
+      <div id="header">
+          <span class="logo-brand">Cinema Avenue</span>    
+        <!-- <a href="https://www.netflix.com/">
+                <img id="logo" src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-5.png">
+            </a> -->
         </div>
-      </nav>
+        <!--LOGO-->  
+
+        
+        <div id="container">
+            <form id="log-in-form" action="">
+                <div class="label-container">
+                    <h2 id="sign-in-text">Sign In</h1>
+                </div>
+    
+                <div class="box-container" id="user-container">
+                    <input class="field" placeholder="Ingresa tu nombre..." id="user-field" name="email" type="text">
+                    <label class="label" id="email-label" for="email-field"></label>
+                </div>
+                <div class="box-container" id="email-container">
+                  <input class="field" placeholder="Correo electronico..." id="email-field" name="email" type="text">
+                  <label class="label" id="email-label" for="email-field"></label>
+                </div>
+                <div class="inputError" id="email-inputError"></div>
+                <div class="box-container" id="pwd-container">
+                    <input class="field" placeholder="Ingresa alguna contraseña" id="pwd-field" name="password" type="password">
+                    <label class="label" id="pwd-label" for="pwd-field"></label>
+                </div>
+                <span id="alert-msg"></span>
+                <div class="inputError" id="pwd-inputError"></div>
+                <div class="box-container" id="login-button-container">
+                    <input id="login-button" type="submit" value="Sign In">
+                </div>
+                <div class="checkbox-row">
+                  <p>La mejor plataforma para reservar lugares en tu cine favorito</p>
+                  <p>Solo para ciudades disponibles ¡Pronto en tu ciudad!</p>  
+                  
+                  
+                
+                </div>
+            </form>
+  
+        </div>
+        
+                </div>
+            </div>
+    
+    </div>
+    <script src="./login.js"></script>
 </body>
 </html>
